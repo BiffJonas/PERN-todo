@@ -4,7 +4,7 @@ import React, {Fragment, useState} from 'react';
 
 const InputToDo = () => {
 
-    const [description, setDescription] = useState("Hello")
+    const [description, setDescription] = useState("")
 
     const onSubmitForm = async e => {
         e.preventDefault()
@@ -16,7 +16,7 @@ const InputToDo = () => {
                 body: JSON.stringify(body)
             });
 
-            console.log(response)
+            window.location = "/"
             
         } catch (err) {
             console.error(err.message)
